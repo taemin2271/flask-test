@@ -17,7 +17,7 @@
 
         /* 메인 컨테이너 (내용을 중앙에 모으고 최대 너비 지정) */
         .container {
-            max-width: 1200px;
+            max-width: 1200px; /* 기존과 동일 또는 살짝 늘림 */
             margin: 0 auto;
         }
 
@@ -28,6 +28,7 @@
             border-bottom: 2px solid #333;
             padding-bottom: 10px;
             margin-bottom: 5px;
+            text-align: center; /* 타이틀 중앙 정렬 */
         }
 
         /* 부제 (프로젝트 계획서) */
@@ -35,6 +36,7 @@
             font-size: 14px;
             color: #888;
             margin-bottom: 40px;
+            text-align: center; /* 부제 중앙 정렬 */
         }
 
         /* 각 섹션 제목 */
@@ -50,33 +52,35 @@
         /* Problem Statement Canvas를 위한 그리드 레이아웃 */
         .canvas-grid {
             display: grid;
-            /* 화면 크기에 따라 200px이상의 너비로 자동 정렬, 최대 4개까지 표시 */
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px; /* 아이템 사이의 간격 */
+            /* 화면이 넓을 때 더 많은 열을 사용 (예: 최소 180px, 최대 5개까지 유연하게) */
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 15px; /* 아이템 사이의 간격 축소 */
             margin-bottom: 30px;
         }
 
         /* Canvas의 각 항목 스타일 */
         .canvas-item {
             border: 1px solid #e0e0e0;
-            padding: 15px;
+            padding: 10px; /* 패딩 축소 */
+            font-size: 13px; /* 폰트 크기 축소 */
         }
 
         .canvas-item h3 {
-            font-size: 16px;
+            font-size: 15px; /* 헤더 폰트 크기 축소 */
             margin-top: 0;
-            margin-bottom: 10px;
+            margin-bottom: 8px; /* 마진 축소 */
             border-bottom: 1px solid #eee;
-            padding-bottom: 8px;
+            padding-bottom: 5px; /* 패딩 축소 */
         }
 
         /* 리스트 스타일 */
         ul {
             padding-left: 20px;
             margin: 0;
+            font-size: 14px; /* 리스트 폰트 크기 */
         }
         li {
-            margin-bottom: 8px;
+            margin-bottom: 6px; /* 리스트 간격 축소 */
         }
 
         /* 이미지 스타일 */
